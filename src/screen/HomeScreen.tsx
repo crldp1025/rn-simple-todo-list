@@ -1,11 +1,13 @@
-import { Text } from '@rneui/base'
 import React from 'react'
-import { SafeAreaView, View } from 'react-native'
+import { SafeAreaView } from 'react-native'
+import TaskList from '../containers/Task/TaskList'
+import colors from '../constant/Colors'
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}: any) => {
+
   return (
-    <SafeAreaView>
-      <Text>Homescreen</Text>
+    <SafeAreaView style={{flex: 1, backgroundColor: colors.white}}>
+      <TaskList navigation={navigation} />
     </SafeAreaView>
   )
 }

@@ -12,5 +12,6 @@ module.exports = {
     'react-native/no-inline-styles': 0,
     'no-trailing-spaces': 0,
     'quotes': 0,
+    'keyword-spacing': 0
   }
 };
