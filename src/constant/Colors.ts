@@ -6,7 +6,7 @@ const colors = {
   darkGray: 'rgb(28, 28, 30)',
   red: 'rgb(215, 0, 21)',
   blue: 'rgb(10, 132, 255)',
-  green: 'rgb(52, 199, 89)'
-}
+  green: 'rgb(52, 199, 89)',
+};
 
-export default colors
+export default colors;
