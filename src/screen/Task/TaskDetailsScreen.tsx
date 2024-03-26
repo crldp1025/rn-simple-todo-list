@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import {Animated, ScrollView, StyleSheet, View} from 'react-native';
 import {ITaskProps} from '../../interface/TaskInterface';
 import {Text} from '@rneui/themed';

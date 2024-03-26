@@ -2,7 +2,6 @@ import React from 'react';
 import {SafeAreaView} from 'react-native';
 import TaskList from '../../containers/Task/TaskList';
 import colors from '../../constant/Colors';
-import TaskProvider from '../../context/TaskContext';
 
 const HomeScreen = ({navigation}: any) => {
   return (

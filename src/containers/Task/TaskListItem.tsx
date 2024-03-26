@@ -1,7 +1,7 @@
 import {CheckBox} from '@rneui/themed';
 import React from 'react';
 import {ITaskProps} from '../../interface/TaskInterface';
-import {Animated, StyleSheet, TouchableHighlight, View} from 'react-native';
+import {Animated, StyleSheet, View} from 'react-native';
 import colors from '../../constant/Colors';
 import AnimatedButton from '../../components/AnimatedButton';
 
@@ -9,12 +9,14 @@ interface ITaskListItemProps {
   task: ITaskProps;
   handleItemOnPress?: (task: ITaskProps) => void | any;
   handleCheckbox?: (task: ITaskProps) => void;
+  onLongPress?: (task: ITaskProps) => void;
 }
 
 const TaskListItem = ({
   task,
   handleItemOnPress = () => {},
   handleCheckbox = () => {},
+  onLongPress = () => {},
 }: ITaskListItemProps) => {
   const [taskItemColorAnimation] = React.useState<Animated.Value>(
     new Animated.Value(task.is_completed ? 1 : 0),
@@ -33,6 +35,7 @@ const TaskListItem = ({
       resultBgColor={colors.green}
       animationState={taskItemColorAnimation}
       handleOnPress={() => handleItemOnPress(task)}
+      onLongPress={() => onLongPress(task)}
       containerStyles={{
         borderBottomWidth: 1,
         borderColor: colors.lightGray,

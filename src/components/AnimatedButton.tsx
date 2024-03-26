@@ -3,12 +3,13 @@ import {
   Animated,
   StyleProp,
   TouchableHighlight,
+  TouchableOpacityProps,
   View,
   ViewStyle,
 } from 'react-native';
 import colors from '../constant/Colors';
 
-interface IAnimatedProps {
+interface IAnimatedProps extends TouchableOpacityProps {
   defaultBgColor: string;
   resultBgColor: string;
   animationState: Animated.Value;
@@ -24,12 +25,14 @@ const AnimatedButton = ({
   handleOnPress = () => {},
   containerStyles,
   children,
+  ...props
 }: IAnimatedProps) => {
   return (
     <TouchableHighlight
       onPress={handleOnPress}
       activeOpacity={0.6}
-      underlayColor={colors.gray}>
+      underlayColor={colors.gray}
+      {...props}>
       <View
         style={[
           containerStyles,
